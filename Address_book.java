@@ -47,6 +47,5 @@ public class Address_book {
 		default:
 		System.out.println("choose correct option");
 		}
-
 	}
 }
