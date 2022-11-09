@@ -20,6 +20,16 @@ public class Address_book {
 		System.out.println("Enter Mobile number");mobileno =  sc1.nextInt();
 	}
 
+	public void display() {
+		System.out.println("First name :"+firstname); 
+		System.out.println("last name :"+lastname);
+		System.out.println("Address :"+address);
+		System.out.println("City name :"+city);
+		System.out.println("State name :"+state);
+		System.out.println("Email Address :"+email);
+		System.out.println("Zipcode :"+zipcode);
+		System.out.println("Mobile number :"+mobileno);
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in Address Book Main class");
 		Scanner sc = new Scanner(System.in);
@@ -32,14 +42,8 @@ public class Address_book {
 		c1.addcontact();
 		break;
 		case 2:
-		c1.addcontact();
+		c1.display();
 		break;
-		case 3:
-		c1.addcontact();
-		break;		         
-		case 4:
-		c1.addcontact();
-		break;	
 		default:
 		System.out.println("choose correct option");
 		}
