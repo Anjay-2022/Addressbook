@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Address_book {
 	Scanner sc = new Scanner(System.in);
-
 	String firstname, lastname, address, city, state, email;
 	int zipcode, mobileno;
 
@@ -40,13 +39,9 @@ public class Address_book {
 	}
 
 	public void editcontact() {
-		System.out.println(
-				"Choose the option for edit \n1.firstname\n2.lastname\n3.address\n4.city\n5.state\n6.email\n7.zipcode\n8.mobilenumber");
-
+		System.out.println("Choose the option for edit \n1.firstname\n2.lastname\n3.address\n4.city\n5.state\n6.email\n7.zipcode\n8.mobilenumber");
 		int option = sc.nextInt();
-
 		switch (option) {
-
 		case 1:
 			System.out.println("Enter First name");
 			firstname = sc.nextLine();
@@ -81,7 +76,16 @@ public class Address_book {
 			break;
 		}
 	}
-
+	public void display() {
+		System.out.println("First name :"+firstname); 
+		System.out.println("last name :"+lastname);
+		System.out.println("Address :"+address);
+		System.out.println("City name :"+city);
+		System.out.println("State name :"+state);
+		System.out.println("Email Address :"+email);
+		System.out.println("Zipcode :"+zipcode);
+		System.out.println("Mobile number :"+mobileno);
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in Address Book Main class");
 		Scanner sc = new Scanner(System.in);
