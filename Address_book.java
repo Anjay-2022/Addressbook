@@ -25,8 +25,7 @@ public class Address_book {
 		zipcode = sc.nextInt();
 		System.out.println("Enter Mobile number");
 		mobileno = sc.nextInt();
-	}
-
+    }
 	public void display() {
 		System.out.println("First name :" + firstname);
 		System.out.println("last name :" + lastname);
@@ -37,11 +36,9 @@ public class Address_book {
 		System.out.println("Zipcode :" + zipcode);
 		System.out.println("Mobile number :" + mobileno);
 	}
-
 	public void editcontact() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println(
-				"Choose the option for edit \n1.firstname\n2.lastname\n3.address\n4.city\n5.state\n6.email\n7.zipcode\n8.mobilenumber");
+		System.out.println("Choose the option for edit \n1.firstname\n2.lastname\n3.address\n4.city\n5.state\n6.email\n7.zipcode\n8.mobilenumber");
 		int option = sc.nextInt();
 		switch (option) {
 		case 1:
@@ -90,7 +87,6 @@ public class Address_book {
 		mobileno = 0;
 		System.out.println("Contact delete");
 	}
-
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in Address Book Main class");
 		Address_book c1 = new Address_book();
