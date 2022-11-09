@@ -20,12 +20,6 @@ public class Address_book {
 		System.out.println("Enter Mobile number");mobileno =  sc1.nextInt();
 	}
 
-
-
-
-
-
-
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in Address Book Main class");
 		Scanner sc = new Scanner(System.in);
@@ -49,14 +43,5 @@ public class Address_book {
 		default:
 		System.out.println("choose correct option");
 		}
-		
-		
-
-
-
-
-
-
 	}
-
 }
