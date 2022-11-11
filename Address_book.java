@@ -32,7 +32,6 @@ public class Address_book {
 		contactlist.add(contact);
 		System.out.println("Enter the directory you want to add contact");
 		String bookname = sc.next();
-
 		if (addressBook.containsKey(bookname)) {
 			ArrayList<Contacts> contactlist = addressBook.get(bookname);
 			addressBook.put(bookname, contactlist);
@@ -142,8 +141,7 @@ public class Address_book {
 		boolean run = true;
 
 		while (run) {
-			System.out.println(
-					"Choose the option \n1.Add contact\n2.Display contact\n3.Edit contact\n4.Delete contact\n5.Exit");
+			System.out.println("Choose the option \n1.Add contact\n2.Display contact\n3.Edit contact\n4.Delete contact\n5.Exit");
 			int option = sc.nextInt();
 			switch (option) {
 			case 1:
