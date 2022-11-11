@@ -1,16 +1,10 @@
 package adressbook;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Address_book {
 	ArrayList<Contacts> contactlist = new ArrayList<Contacts>();
-
-	// HashMap<String, ArrayList<Contacts>> addressBook = new HashMap<String,ArrayList<Contacts>>();
-	// public Address_book() {
-	// // default
-	// }
 	public void addcontact() {
 		Scanner sc = new Scanner(System.in);
 		Contacts contact = new Contacts();
@@ -33,19 +27,6 @@ public class Address_book {
 		contact.setMobileno(sc.nextLong());
 
 		contactlist.add(contact);
-		// System.out.println("Enter the directory you want to add contact");
-		// String bookname = sc.next();
-		//
-		// if (addressBook.containsKey(bookname)) {
-		// ArrayList<Contacts> contactlist = addressBook.get(bookname);
-		// addressBook.put(bookname, contactlist);
-		// System.out.println("New contact added to existing directory "+bookname);
-		// } else {
-		// ArrayList<Contacts> contactlist = addressBook.get(bookname);
-		// addressBook.put(bookname, contactlist);
-		// System.out.println(" New Directory"+bookname +" Created");
-		// System.out.println("New contact added to "+bookname);
-		// }
 	}
 
 	public void display() {
@@ -138,6 +119,17 @@ public class Address_book {
 			System.out.println("Directory is empty");
 	}
 
+	public void deletecontact() {
+		firstname = null;
+		lastname = null;
+		address = null;
+		city = null;
+		state = null;
+		email = null;
+		zipcode = 0;
+		mobileno = 0;
+		System.out.println("Contact delete");
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in Address Book Main class");
 		Address_book c1 = new Address_book();
@@ -145,8 +137,7 @@ public class Address_book {
 		boolean run = true;
 
 		while (run) {
-			System.out.println(
-					"Choose the option \n1.Add contact\n2.Display contact\n3.Edit contact\n4.Delete contact\n5.Exit");
+			System.out.println("Choose the option \n1.Add contact\n2.Display contact\n3.Edit contact\n4.Delete contact\n5.Exit");
 			int option = sc.nextInt();
 			switch (option) {
 			case 1:
