@@ -6,11 +6,8 @@ import java.util.Scanner;
 
 public class Address_book {
 	ArrayList<Contacts> contactlist = new ArrayList<Contacts>();
+	HashMap<String, ArrayList<Contacts>> addressBook = new HashMap<String, ArrayList<Contacts>>();
 
-	// HashMap<String, ArrayList<Contacts>> addressBook = new HashMap<String,ArrayList<Contacts>>();
-	// public Address_book() {
-	// // default
-	// }
 	public void addcontact() {
 		Scanner sc = new Scanner(System.in);
 		Contacts contact = new Contacts();
@@ -33,19 +30,19 @@ public class Address_book {
 		contact.setMobileno(sc.nextLong());
 
 		contactlist.add(contact);
-		// System.out.println("Enter the directory you want to add contact");
-		// String bookname = sc.next();
-		//
-		// if (addressBook.containsKey(bookname)) {
-		// ArrayList<Contacts> contactlist = addressBook.get(bookname);
-		// addressBook.put(bookname, contactlist);
-		// System.out.println("New contact added to existing directory "+bookname);
-		// } else {
-		// ArrayList<Contacts> contactlist = addressBook.get(bookname);
-		// addressBook.put(bookname, contactlist);
-		// System.out.println(" New Directory"+bookname +" Created");
-		// System.out.println("New contact added to "+bookname);
-		// }
+		System.out.println("Enter the directory you want to add contact");
+		String bookname = sc.next();
+
+		if (addressBook.containsKey(bookname)) {
+			ArrayList<Contacts> contactlist = addressBook.get(bookname);
+			addressBook.put(bookname, contactlist);
+			System.out.println("New contact added to existing directory " + bookname);
+		} else {
+			ArrayList<Contacts> contactlist = addressBook.get(bookname);
+			addressBook.put(bookname, contactlist);
+			System.out.println(" New Directory" + bookname + " Created");
+			System.out.println("New contact added to " + bookname);
+		}
 	}
 
 	public void display() {
