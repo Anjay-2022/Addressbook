@@ -118,18 +118,7 @@ public class Address_book {
 		} else
 			System.out.println("Directory is empty");
 	}
-
-	public void deletecontact() {
-		firstname = null;
-		lastname = null;
-		address = null;
-		city = null;
-		state = null;
-		email = null;
-		zipcode = 0;
-		mobileno = 0;
-		System.out.println("Contact delete");
-	}
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program in Address Book Main class");
 		Address_book c1 = new Address_book();
